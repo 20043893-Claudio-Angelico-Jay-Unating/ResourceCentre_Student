@@ -118,11 +118,21 @@ public class ResourceCentreTest {
 	public void testDoLoanChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
+		
+		//Test that the list is not null
+		assertNotNull("Test if there is a chromebook list to check",chromebookList);
+		
+		//Add an item into the list and loan it out, then check if it is possible to loan a loaned item
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "27/7/2021");
+		
+		assertFalse("Cant loan a chromebook that is already on loan",ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "27/7/2021"));
+		
 	}
 	
 	@Test
 	public void testDoReturnCamcorder() {
-		//fail("Not yet implemented");
+		//fail("Not yet implemented");		
 		// write your code here
 		
 	}
