@@ -154,8 +154,7 @@ public class ResourceCentreTest {
 	public void testDoReturnCamcorder() {
 		//fail("Not yet implemented");		
 		// write your code here
-		ResourceCentre.addCamcorder(camcorderList, cc1);	
-		assertFalse("Check that item is available", ResourceCentre.doReturnCamcorder(camcorderList, camcorderList.get(0).getAssetTag()));
+		
 		
 		
 	}
