@@ -115,12 +115,13 @@ public class ResourceCentreTest {
 		assertNotNull(camcorderList);
 		
 		// Test if items is available to loan
-		ResourceCentre.addCamcorder(camcorderList, cc1);	
-		assertTrue("Check that item is available", camcorderList.get(0).getIsAvailable());
+		ResourceCentre.addCamcorder(camcorderList, cc1);
+		boolean loan = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "7-7-2021");
+		assertTrue("Check that item is available", loan);
 		
 		
 		// Test if items is unavailable to loan
-		ResourceCentre.addCamcorder(camcorderList, cc2);	
+		ResourceCentre.addCamcorder(camcorderList, cc2);
 		assertFalse("Check that item is unavailable", camcorderList.get(1).getIsAvailable() == false);
 		
 			
