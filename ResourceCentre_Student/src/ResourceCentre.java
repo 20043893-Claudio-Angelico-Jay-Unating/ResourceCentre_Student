@@ -230,6 +230,7 @@ public class ResourceCentre {
 				
 				isLoaned = true;
 				
+				
 			}
 		}
 		return isLoaned;

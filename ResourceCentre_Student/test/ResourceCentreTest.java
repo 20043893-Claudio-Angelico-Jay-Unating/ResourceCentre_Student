@@ -142,6 +142,7 @@ public class ResourceCentreTest {
 		ResourceCentre.addChromebook(chromebookList, cb1);
 		ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "27/7/2021");
 		
+		
 		assertFalse("Cant loan a chromebook that is already on loan",ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "27/7/2021"));
 		
 	}
