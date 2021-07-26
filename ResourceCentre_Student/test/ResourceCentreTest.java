@@ -122,7 +122,7 @@ public class ResourceCentreTest {
 		
 		// Test if items is unavailable to loan
 		ResourceCentre.addCamcorder(camcorderList, cc2);
-		assertFalse("Check that item is unavailable", camcorderList.get(1).getIsAvailable() == false);
+		assertFalse("Check that item is unavailable ", camcorderList.get(1).getIsAvailable() == false);
 		
 			
 		// Test that the item that is being loaned exist
