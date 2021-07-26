@@ -111,6 +111,22 @@ public class ResourceCentreTest {
 	public void testDoLoanCamcorder() {
 		//fail("Not yet implemented");
 		// write your code here
+		// Test if items is available to loan
+		ResourceCentre.addCamcorder(camcorderList, cc1);	
+		assertTrue("Check that item is available", camcorderList.get(0).getIsAvailable());
+		
+		
+		// Test if items is unavailable to loan
+		ResourceCentre.addCamcorder(camcorderList, cc2);	
+		assertFalse("Check that item is unavailable", camcorderList.get(1).getIsAvailable() == false);
+		
+		
+		// Test that the item that is being loaned exist
+		for(Camcorder c: camcorderList)
+		{
+			assertFalse("Check that item does not exist.", c.getAssetTag() == "CC1234");
+		}
+
 		
 	}
 	
