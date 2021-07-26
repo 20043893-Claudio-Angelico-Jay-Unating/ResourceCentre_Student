@@ -111,6 +111,9 @@ public class ResourceCentreTest {
 	public void testDoLoanCamcorder() {
 		//fail("Not yet implemented");
 		// write your code here
+		//Test that the item list is not null but empty
+		assertNotNull(camcorderList);
+		
 		// Test if items is available to loan
 		ResourceCentre.addCamcorder(camcorderList, cc1);	
 		assertTrue("Check that item is available", camcorderList.get(0).getIsAvailable());
@@ -120,7 +123,7 @@ public class ResourceCentreTest {
 		ResourceCentre.addCamcorder(camcorderList, cc2);	
 		assertFalse("Check that item is unavailable", camcorderList.get(1).getIsAvailable() == false);
 		
-		
+			
 		// Test that the item that is being loaned exist
 		for(Camcorder c: camcorderList)
 		{
@@ -151,6 +154,9 @@ public class ResourceCentreTest {
 	public void testDoReturnCamcorder() {
 		//fail("Not yet implemented");		
 		// write your code here
+		ResourceCentre.addCamcorder(camcorderList, cc1);	
+		assertFalse("Check that item is available", ResourceCentre.doReturnCamcorder(camcorderList, camcorderList.get(0).getAssetTag()));
+		
 		
 	}
 	@Test
