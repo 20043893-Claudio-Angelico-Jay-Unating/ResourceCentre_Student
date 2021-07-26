@@ -170,7 +170,7 @@ public class ResourceCentreTest {
 		
 		//error
 		isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0013");
-		assertFalse("Test if loaned out camcorder CC0013 is returned - false", isReturned);
+		assertFalse("Test if loaned out camcorder CC0013 is returned - false ", isReturned);
 		
 		
 	}
