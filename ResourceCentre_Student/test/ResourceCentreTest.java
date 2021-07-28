@@ -157,6 +157,10 @@ public class ResourceCentreTest {
 	public void testDoReturnChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		assertFalse("Check that item is available ", ResourceCentre.doReturnChromebook(chromebookList, chromebookList.get(0).getAssetTag()));
+		
+		
 	}
 	
 	@After
